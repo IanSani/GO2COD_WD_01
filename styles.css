@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+   
+.tasks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid ;
+    width: 750px;
+    border-radius: 15px;
+    height: 400px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
