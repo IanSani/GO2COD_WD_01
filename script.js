@@ -79,3 +79,12 @@ const editTask = (buttonEl) => {
 
   taskForm.classList.toggle("hidden");  
 }
+
+const reset = () => {
+    addOrUpdateTaskBtn.innerText = "Add Task";
+    titleInput.value = "";
+    dateInput.value = "";
+    descriptionInput.value = "";
+    taskForm.classList.toggle("hidden");
+    currentTask = {};
+  }
