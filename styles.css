@@ -2,8 +2,8 @@
     --white: #fff;
     --light-grey: #f5f6f7;
     --dark-grey: #0a0a23;
-    --yellow: #f1be32;
-    --golden-yellow: #feac32;
+    --yellow: #0d82d8;
+    --golden-yellow: #088ced;
   }
   
   *,
@@ -15,8 +15,7 @@
   }
   
   body {
-    background-color: var(--dark-grey);
-  }
+    background-color: #5e6266 ;
   
   main {
     display: flex;
@@ -49,12 +48,12 @@
     margin: 10px;
     color: var(--dark-grey);
     background-color: var(--golden-yellow);
-    background-image: linear-gradient(#fecc4c, #ffac33);
+    background-image: linear-gradient(#0c5aa3, #1489f7);
     border-color: var(--golden-yellow);
     border-width: 3px;
   }
   .btn:hover {
-    background-image: linear-gradient(#ffcc4c, #f89808);
+    background-image: linear-gradient(#0c5aa3, #1489f7);
   }
   
   .large-btn {
