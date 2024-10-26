@@ -9,3 +9,29 @@ const tasksContainer = document.getElementById("tasks-container");
 const titleInput = document.getElementById("title-input");
 const dateInput = document.getElementById("date-input");
 const descriptionInput = document.getElementById("description-input");
+
+const taskData = JSON.parse(localStorage.getItem("data")) || [];
+let currentTask = {};
+
+const addOrUpdateTask = () => {
+    if(!titleInput.value.trim()){
+        alert("Please provide a title");
+        return;
+      }
+      const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
+      const taskObj = {
+        id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
+        title: titleInput.value,
+        date: dateInput.value,
+        description: descriptionInput.value,
+      };
+      if (dataArrIndex === -1) {
+        taskData.unshift(taskObj);
+      } else {
+        taskData[dataArrIndex] = taskObj;
+      }
+    
+      localStorage.setItem("data", JSON.stringify(taskData));
+      updateTaskContainer()
+      reset()
+    };
